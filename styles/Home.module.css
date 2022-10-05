@@ -31,7 +31,7 @@
 }
 
 
-@media (max-width:460px){
+@media (max-width:760px){
     .mobile_nav_bar {
       display:block;
     }

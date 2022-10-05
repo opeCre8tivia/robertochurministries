@@ -1,9 +1,9 @@
 /**
  * resposive nav bar for wide screens
  */
-
-import Image from "next/image"
 import styles from "../../styles/Nav.module.css"
+import Logo from "./Logo"
+import NavLinkItem from "./NavLinkItem"
 
 const NavBar =()=>{
 
@@ -36,27 +36,27 @@ const NavBar =()=>{
         <div className={styles.navContainer}>
          {/* logo */}
          <div className={styles.logo_container}>
-            <div className={styles.logo}>
-               <Image src="/rblogo.png" height={400} width={400} />
-            </div>
-
+            
+           <Logo/>
             <div className={styles.nav_text}> 
                 <div className={styles.org_title}> ROBERT OCHUR</div>
                 <div className={styles.org_description}> MINISTIRES </div>
             </div>
+
          </div>
 
          {/* menu items */}
          <div className={styles.menu_item_container}>
-            {
+             {
                 links && links.map((link)=>(
-                    <div className={styles.menu_item}>{ link.title} </div>
+                   <NavLinkItem  title={link.title}/>
                 ))
-            }
+             }
 
           <div className={styles.donate_btn}>
              DONATE
           </div>
+
          </div>
 
         </div>
