@@ -2,8 +2,10 @@ import Head from 'next/head'
 import Image from 'next/image'
 import HeroImage from '../src/components/HeroImage'
 import Herotext from '../src/components/Herotext'
+import HomePageSection from '../src/components/HomePageSection'
 import MobileNav from '../src/components/MobileNavBar'
 import NavBar from '../src/components/NavBar'
+import SectionTitle from '../src/components/SectionTitle'
 import styles from '../styles/Home.module.css'
 
 export default function Home() {
@@ -26,17 +28,26 @@ export default function Home() {
         </div>
 
         {/* hero section */}
-        <div className="w-full min-h-[80vh] grid grid-cols-2 gap-2">
-
-          <div className='flex justify-center align-middle'>
-                <Herotext/>
+        <div className="w-full min-h-[70vh] max-h-[70vh] relative md:min-h-[90vh] md:max-h-[90vh] md:grid md:grid-cols-2 gap-2 overflow-hidden ">
+          
+          <div className='w-full h-full absolute top-0 left-0 right-0 flex flex-col justify-center align-middle z-40 md:relative md:flex md:justify-center md:align-middle'>
+                <Herotext/>    
           </div>
 
-          <div className='flex justify-center align-middle'>
+          {/* translucent cover */}
+          <div className='absolute w-full h-full z-30 bg-black opacity-40 md:hidden'>
+            
+          </div>
+
+          <div className='w-full h-full md:max-h-[90vh] block md:flex md:justify-center md:align-middle'>
               <HeroImage />
           </div>
 
         </div>
+
+        {/* missions */}
+         <SectionTitle title="Missions" />
+         <HomePageSection/>
        
       </main>
 

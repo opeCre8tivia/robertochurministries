@@ -3,8 +3,8 @@ import React from 'react'
 
 const HeroImage = () => {
   return (
-    <div className='w-full h-full flex justify-center align-middle'>
-         <Image src="/roberttwo.png" width={500} height={400}/>
+    <div className='w-full h-full flex justify-center items-end'>
+         <img src="/robert.JPG" className='w-full h-[600px]  md:w-[450px] '/>
     </div>
   )
 }
