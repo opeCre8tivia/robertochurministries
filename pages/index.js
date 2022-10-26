@@ -48,6 +48,8 @@ export default function Home() {
         {/* missions */}
          <SectionTitle title="Missions" />
          <HomePageSection/>
+         <SectionTitle title="Events" />
+
        
       </main>
 

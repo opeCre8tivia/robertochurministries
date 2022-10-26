@@ -40,7 +40,7 @@ const NavBar =()=>{
            <Logo/>
             <div className={styles.nav_text}> 
                 <div className={styles.org_title}> ROBERT OCHUR</div>
-                <div className={styles.org_description}> MINISTIRES </div>
+                <div className={styles.org_description}> MINISTRIES </div>
             </div>
 
          </div>
