@@ -1,11 +1,14 @@
 import Head from 'next/head'
 import Image from 'next/image'
+import DividerSection from '../src/components/DividerSection'
 import HeroImage from '../src/components/HeroImage'
 import Herotext from '../src/components/Herotext'
-import HomePageSection from '../src/components/HomePageSection'
+import HomePageSectionImgLeft from '../src/components/HomePageSectionImgLeft'
+import HomePageSectionImgRight from '../src/components/HomePageSectionImgRight'
 import MobileNav from '../src/components/MobileNavBar'
 import NavBar from '../src/components/NavBar'
 import SectionTitle from '../src/components/SectionTitle'
+import ThemeButton from '../src/components/ThemeButton'
 import styles from '../styles/Home.module.css'
 
 export default function Home() {
@@ -28,7 +31,10 @@ export default function Home() {
         </div>
 
         {/* hero section */}
-        <div className="w-full min-h-[70vh] max-h-[70vh] relative md:min-h-[90vh] md:max-h-[90vh] md:grid md:grid-cols-2 gap-2 overflow-hidden ">
+        <div className="w-full min-h-[70vh] max-h-[70vh] relative md:min-h-[90vh] md:max-h-[90vh] md:grid md:grid-cols-2 gap-2 overflow-hidden bg-no-repeat bg-cover " style={{backgroundImage:"url('./bg.jpeg')"}}>
+
+          {/* extream background image */}
+          {/* <img src="/bg.jpeg" className='w-full h-[70vh] sm:h-auto -z-40 absolute top-0 right-0' /> */}
           
           <div className='w-full h-full absolute top-0 left-0 right-0 flex flex-col justify-center align-middle z-40 md:relative md:flex md:justify-center md:align-middle'>
                 <Herotext/>    
@@ -47,8 +53,76 @@ export default function Home() {
 
         {/* missions */}
          <SectionTitle title="Missions" />
-         <HomePageSection/>
-         <SectionTitle title="Events" />
+         <HomePageSectionImgLeft/>
+
+         {/* bible study section div */}
+        <DividerSection imageUrl="/biblestudy.jpg">
+
+          <div className='w-full md:min-w-[50%] md:max-w-[50%]  text-white'>
+              <h1 className='text-[40px] text-center '>
+                 TRANSFORMING LIVES
+              </h1>
+
+              <h5 className="text-center">
+                by the
+              </h5>
+
+              <h1 className='text-[40px] text-center'>
+                WORD OF GOD
+              </h1>
+
+          </div>
+
+          <div className='w-full md:min-w-[50%] md:max-w-[50%]  flex flex-col justify-center items-center'>
+            <h4 className='text-[20px] text-white text-center'>
+             Join our online bible study classes
+            </h4> 
+
+            <ThemeButton title="COMING SOON" styles={{width:"40%"}} />
+          </div>
+
+        </DividerSection>
+
+
+         {/* upcoming */}
+         <SectionTitle title="Upcoming" />
+         <HomePageSectionImgRight/>
+
+         {/* buy book section  */}
+        <DividerSection imageUrl="/bookbg.jpg">
+
+        <div className='w-full md:min-w-[50%] md:max-w-[50%]  flex flex-col justify-center items-center'>
+          <h4 className='text-[20px] text-white text-center'>
+            Join our online bible study classes 
+          </h4> 
+
+        </div>
+
+
+
+        <div className='w-full flex flex-col items-center md:min-w-[50%] md:max-w-[50%]  text-white'>
+            <h1 className='text-[40px] text-center '>
+              THE DISCLOSURE
+            </h1>
+
+            <h5 className="text-center">
+              Written by Bsp Robert, the book exposes the  consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore
+            </h5>
+
+
+             <ThemeButton title="GET YOUR COPY TODAY" styles={{width:"auto"}} />
+
+        </div>
+
+       
+
+</DividerSection>
+
+
+     {/* get involved */}
+     <SectionTitle title="Get Involved" />
+
+
 
        
       </main>
